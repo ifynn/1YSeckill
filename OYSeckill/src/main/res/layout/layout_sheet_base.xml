@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/gray_E8E8E8"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1px"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="标题"
+        android:textColor="@color/black_707070"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/lv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_F0F0F0"
+            android:clipToPadding="false"
+            android:divider="@color/gray_E8E8E8"
+            android:dividerHeight="1px"
+            android:listSelector="@color/transparent"
+            android:paddingBottom="8dp" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/ProgressBarStyleCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1px"
+        android:background="@drawable/view_item_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="取消"
+        android:textColor="@color/black_4F4F4F"
+        android:textSize="14sp" />
+
+</LinearLayout>

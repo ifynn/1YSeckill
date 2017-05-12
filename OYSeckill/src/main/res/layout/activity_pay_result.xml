@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.fynn.oyseckill.widget.Titlebar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titlebar:bar_background="@color/white"
+        titlebar:bar_title="参与结果"
+        titlebar:divider_color="@color/gray_E8E8E8"
+        titlebar:go_back="@drawable/arrow_left_black_selector"
+        titlebar:right_action_color="@drawable/text_black_selector"
+        titlebar:title_color="@drawable/text_black_selector" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_state"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="35dp"
+                    android:src="@drawable/icon_recharge_success" />
+
+                <TextView
+                    android:id="@+id/tv_desc"
+                    style="@style/TextStyle.Large"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="恭喜，参与成功！"
+                    android:textColor="@color/green_32CD32" />
+
+                <TextView
+                    android:id="@+id/tv_detail"
+                    style="@style/TextStyle.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="15dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:text="请耐心等待商品揭晓" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="25dp">
+
+                    <TextView
+                        android:id="@+id/tv_continue"
+                        style="@style/TextStyle.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_corner_red_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingBottom="13dp"
+                        android:paddingTop="13dp"
+                        android:text="继续参与"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_record"
+                        style="@style/TextStyle.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_corner_alpha_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingBottom="13dp"
+                        android:paddingTop="13dp"
+                        android:text="参与记录"
+                        android:textColor="@color/black_4F4F4F"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

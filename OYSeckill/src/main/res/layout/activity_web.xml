@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.fynn.oyseckill.widget.Titlebar
+            android:id="@+id/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:bar_background="@color/white"
+            app:divider_color="@color/gray_E8E8E8"
+            app:go_back="@drawable/arrow_left_black_selector"
+            app:right_action_color="@drawable/text_black_selector"
+            app:title_color="@color/black_4F4F4F" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@style/ProgressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/titlebar"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:max="100"
+            android:progress="100" />
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/fragment_web"
+        android:name="com.fynn.oyseckill.web.WebFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_web" />
+
+</LinearLayout>

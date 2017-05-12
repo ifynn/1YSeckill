@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp">
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="12dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:minLines="2"
+                android:text="Apple iPhone 64G 现货开卖"
+                android:textColor="@color/black_4F4F4F"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_issue_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_product_name"
+                android:layout_marginTop="5dp"
+                android:text="期号：1000753"
+                android:textColor="@color/black_666666"
+                android:textSize="13sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_issue_no"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_luck_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="获得者：oys1002"
+                    android:textColor="@color/black_666666"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/pb_progress"
+                    style="@style/ProgressBarStyleSeckill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:max="100"
+                    android:maxHeight="6dp"
+                    android:minHeight="6dp"
+                    android:progress="0" />
+            </FrameLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingRight="15dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/tv_pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="我已参与：1人次"
+            android:textColor="@color/gray_919191"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_pt_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tv_pt"
+            android:clickable="true"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="查看详情"
+            android:textColor="@color/blue_4876FF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_buy_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_corner_alpha_selector"
+            android:clickable="true"
+            android:text="再次购买"
+            android:textColor="@color/black_4F4F4F"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

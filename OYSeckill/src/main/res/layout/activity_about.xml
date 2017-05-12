@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_FCFCFC"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.fynn.oyseckill.widget.Titlebar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/white"
+        app:bar_title="关于"
+        app:divider_color="@color/gray_E8E8E8"
+        app:go_back="@drawable/arrow_left_black_selector"
+        app:title_color="@color/black_4F4F4F" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:src="@mipmap/app_logo" />
+
+        <LinearLayout
+            android:id="@+id/ll_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="1元秒"
+                android:textColor="@color/black_707070"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_version_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="v1.0"
+                android:textColor="@color/black_707070"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_agreement"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:text="微信客服：1元秒服务"
+            android:textColor="@color/black_666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_agreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_rights"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:padding="10dp"
+            android:text="许可协议"
+            android:textColor="@color/blue_4876FF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_rights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:text="© Fynn All Rights Reserved."
+            android:textColor="@color/gray_D6D6D6"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:minLines="2"
+        android:text="晶品元 温州特产味道鲜美泥螺醉螺无沙极脆美味即食海鲜贝类食品280g/瓶"
+        android:textColor="@color/black_4F4F4F"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_issue_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="期号：1900765"
+        android:textColor="@color/black_707070"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_announce_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="即将揭晓..."
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="获得者：oys10056"
+        android:textColor="@color/black_707070"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_user_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="用户ID：10056(唯一不变标识)"
+        android:textColor="@color/black_707070"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_luck_seckill_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="幸运号码：1000677"
+        android:textColor="@color/black_707070"
+        android:textSize="12sp" />
+
+</LinearLayout>

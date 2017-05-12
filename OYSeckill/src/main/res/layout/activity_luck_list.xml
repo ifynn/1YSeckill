@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.fynn.oyseckill.widget.Titlebar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titlebar:bar_background="@color/white"
+        titlebar:bar_title="幸运记录"
+        titlebar:divider_color="@color/gray_E8E8E8"
+        titlebar:go_back="@drawable/arrow_left_black_selector"
+        titlebar:right_action_color="@drawable/text_black_selector"
+        titlebar:title_color="@drawable/text_black_selector" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/background"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/lv_luck_record"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:clipToPadding="false"
+            android:divider="@color/background"
+            android:dividerHeight="10dp"
+            android:listSelector="@color/transparent"
+            android:paddingBottom="10dp">
+
+        </ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:text="暂无幸运纪录"
+        android:textColor="@color/gray_919191"
+        android:textSize="14sp" />
+
+</LinearLayout>

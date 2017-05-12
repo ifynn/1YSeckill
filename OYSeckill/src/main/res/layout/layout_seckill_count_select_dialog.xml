@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="参与人次"
+            android:textColor="@color/black_4F4F4F"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/icon_close_circle_gray" />
+    </RelativeLayout>
+
+    <include layout="@layout/divider" />
+
+    <com.fynn.oyseckill.widget.SeckillCountView
+        android:id="@+id/seckill_count_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/seckill_count_picker_bg" />
+
+    <LinearLayout
+        android:id="@+id/ll_count_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_corner_alpha_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@drawable/text_black_selector"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_corner_alpha_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="15"
+            android:textColor="@drawable/text_black_selector"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_corner_alpha_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="20"
+            android:textColor="@drawable/text_black_selector"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_corner_alpha_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="50"
+            android:textColor="@drawable/text_black_selector"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_count_btm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_corner_alpha_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="100"
+            android:textColor="@drawable/text_black_selector"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_corner_alpha_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="200"
+            android:textColor="@drawable/text_black_selector"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="18dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_corner_alpha_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="300"
+            android:textColor="@drawable/text_black_selector"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_corner_alpha_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="500"
+            android:textColor="@drawable/text_black_selector"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_seckill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorPrimary"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="12dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="12dp"
+        android:text="立即秒杀"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</LinearLayout>

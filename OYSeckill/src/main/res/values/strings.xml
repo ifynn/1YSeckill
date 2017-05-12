@@ -1,0 +1,5 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">1元秒</string>
+    <string name="regex_number">1234567890</string>
+    <string name="recharge_success_gained_coin">已获得%s秒币</string>
+</resources>

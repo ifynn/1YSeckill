@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.fynn.oyseckill.widget.Titlebar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/white"
+        app:bar_title="结算"
+        app:divider_color="@color/gray_E8E8E8"
+        app:go_back="@drawable/arrow_left_black_selector"
+        app:right_action_color="@drawable/text_black_selector"
+        app:title_color="@color/black_4F4F4F" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/iv_pic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_product_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:minLines="2"
+                        android:text="商品名称"
+                        android:textColor="@color/black_383838"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_issue_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="期号："
+                        android:textColor="@color/black_666666"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@color/background"
+                android:checkedButton="@+id/rb_rest_coin"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_rest_coin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/icon_tab_main_selected"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/checkbox_selector"
+                    android:padding="12dp"
+                    android:text="秒币支付 (剩余：30秒币)"
+                    android:textColor="@color/black_383838"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_wechat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/icon_wechat"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/checkbox_selector"
+                    android:padding="12dp"
+                    android:text="微信支付"
+                    android:textColor="@color/black_383838"
+                    android:textSize="13sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_pay_rqa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="12dp"
+                android:text="支付遇到问题？点击了解详情"
+                android:textColor="@color/gray_919191"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20元"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

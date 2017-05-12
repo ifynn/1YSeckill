@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.fynn.oyseckill.widget.Titlebar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titlebar:bar_background="@color/white"
+        titlebar:bar_title="地址管理"
+        titlebar:divider_color="@color/gray_E8E8E8"
+        titlebar:go_back="@drawable/arrow_left_black_selector"
+        titlebar:right_action="添加"
+        titlebar:right_action_color="@drawable/text_black_selector"
+        titlebar:title_color="@drawable/text_black_selector" />
+
+    <com.fynn.oyseckill.widget.OverListView
+        android:id="@+id/lv_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:clipToPadding="false"
+        android:divider="@color/background"
+        android:dividerHeight="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="visible">
+
+    </com.fynn.oyseckill.widget.OverListView>
+
+    <LinearLayout
+        android:id="@+id/ll_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_add_adr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_corner_red_selector"
+            android:enabled="true"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="添加地址"
+            android:textColor="@drawable/text_color_white_selector"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

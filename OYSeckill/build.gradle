@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+
+buildscript {
+
+    repositories {
+        mavenCentral()
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.fynn.oyseckill"
+        minSdkVersion 15
+        targetSdkVersion 22 //兼容 Mob SMS SDK
+        versionCode 2010 //2010
+        versionName "2.0.1"
+        signingConfig signingConfigs.debug
+        // dex突破65535的限制
+        multiDexEnabled true
+    }
+
+    useLibrary 'org.apache.http.legacy'
+
+    sourceSets {
+        main.jniLibs.srcDirs = ['libs']
+        main.assets.srcDirs = ['assets']
+
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+    signingConfigs {
+        debug {
+            keyAlias 'fynn'
+            keyPassword '123456'
+            storeFile file('ketstore.jks')
+            storePassword '123456'
+        }
+        release {
+            keyAlias 'fynn'
+            keyPassword '123456'
+            storeFile file('ketstore.jks')
+            storePassword '123456'
+        }
+    }
+
+    buildTypes {
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            zipAlignEnabled true  //是否zip对齐
+            minifyEnabled true  //是否混淆代码
+            shrinkResources true  //是否删除无用资源文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            zipAlignEnabled false
+            minifyEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
+            signingConfig signingConfigs.debug
+            versionNameSuffix "-debug" //版本号后面加-debug标识
+        }
+    }
+}
+
+repositories{
+    flatDir{
+        dirs 'libs' //aar的目录地址
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile project(':AppU')
+    compile 'com.ashokvarma.android:bottom-navigation-bar:1.3.0'
+    compile 'com.jude:rollviewpager:1.4.5'
+    compile 'com.android.support:cardview-v7:23.2.1'
+    compile 'com.github.userswlwork:pull-to-refresh:1.0.0'
+
+    compile name:'SMSSDK-2.0.2', ext:'aar'
+
+    compile 'cn.bmob.android:http-legacy:1.0'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'org.jetbrains:annotations-java5:15.0'
+}

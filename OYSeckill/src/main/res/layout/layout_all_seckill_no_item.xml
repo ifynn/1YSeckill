@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1"
+        android:text="2018-09-23 09:35:56.231"
+        android:textColor="@color/black_4F4F4F"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30人次"
+        android:textColor="@color/black_828282"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/iv_indicator"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/icon_arrow_right_small_gray" />
+
+</LinearLayout>

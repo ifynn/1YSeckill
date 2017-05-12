@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.fynn.oyseckill.widget.Titlebar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:divider_color="@color/red_FF4040"
+        app:go_back_display="false"
+        app:title_src="@drawable/icon_main_title_logo" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <com.fynn.oyseckill.widget.StateScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.fynn.oyseckill.app.module.home.card.PagerCard
+                    android:id="@+id/pager_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.fynn.oyseckill.app.module.home.card.PagerCard>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray_E8E8E8" />
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tl_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    app:tabTextAppearance="@style/TextStyle.HomeTabItem">
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人气" />
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="进度" />
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="最近" />
+
+                    <android.support.design.widget.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout="@layout/item_home_tab" />
+
+                </android.support.design.widget.TabLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray_E8E8E8" />
+
+                <com.fynn.oyseckill.app.module.home.card.HomeProductView
+                    android:id="@+id/hpv_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.fynn.oyseckill.app.module.home.card.HomeProductView>
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="上拉加载更多"
+                    android:textColor="@color/gray_919191"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.fynn.oyseckill.widget.StateScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <!-- 水波纹：android:foreground="?android:attr/selectableItemBackground" -->
+
+</LinearLayout>

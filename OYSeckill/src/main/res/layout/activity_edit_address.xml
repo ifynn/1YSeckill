@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.fynn.oyseckill.widget.Titlebar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titlebar:bar_background="@color/white"
+        titlebar:bar_title="添加/编辑地址"
+        titlebar:divider_color="@color/gray_E8E8E8"
+        titlebar:go_back="@drawable/arrow_left_black_selector"
+        titlebar:right_action_color="@drawable/text_black_selector"
+        titlebar:title_color="@drawable/text_black_selector" />
+
+    <com.fynn.oyseckill.widget.OverScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    style="@style/TextStyle.Middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:text="收货人" />
+
+                <EditText
+                    android:id="@+id/et_receiver"
+                    style="@style/TextStyle.Middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="填写收货人姓名"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:textColor="@color/black_4F4F4F"
+                    android:textColorHint="@color/gray_D6D6D6" />
+
+            </LinearLayout>
+
+            <include layout="@layout/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    style="@style/TextStyle.Middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:text="手机号" />
+
+                <EditText
+                    android:id="@+id/et_mobile"
+                    style="@style/TextStyle.Middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="填写联系方式"
+                    android:inputType="numberDecimal"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColor="@color/black_4F4F4F"
+                    android:textColorHint="@color/gray_D6D6D6" />
+
+            </LinearLayout>
+
+            <include layout="@layout/divider" />
+
+            <LinearLayout
+                android:id="@+id/ll_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/view_item_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    style="@style/TextStyle.Middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/transparent"
+                    android:text="所在地区" />
+
+                <TextView
+                    android:id="@+id/tv_area"
+                    style="@style/TextStyle.Middle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:ellipsize="middle"
+                    android:hint="选择收货区域"
+                    android:singleLine="true"
+                    android:textColor="@color/black_4F4F4F"
+                    android:textColorHint="@color/gray_D6D6D6" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/icon_arrow_right_small_gray" />
+
+            </LinearLayout>
+
+            <include layout="@layout/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    style="@style/TextStyle.Middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/white"
+                    android:text="详细地址" />
+
+                <EditText
+                    android:id="@+id/et_detail"
+                    style="@style/TextStyle.Middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:hint="街道、楼牌号等"
+                    android:maxLength="100"
+                    android:maxLines="3"
+                    android:textColor="@color/black_4F4F4F"
+                    android:textColorHint="@color/gray_D6D6D6" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.fynn.oyseckill.widget.OverScrollView>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/btn_corner_red_selector"
+        android:enabled="false"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="@drawable/text_color_white_selector"
+        android:textSize="14sp" />
+
+</LinearLayout>

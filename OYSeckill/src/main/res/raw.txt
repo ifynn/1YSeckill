@@ -1,0 +1,12 @@
+app -- UI相关
+    core -- 核心框架
+    module -- 模块
+        home -- 首页
+        main -- 主Activity
+        find -- "发现"页
+        account -- 账户
+db -- 数据存储
+model -- 数据模型
+util -- 工具类
+web -- 网络
+widget -- 小组件

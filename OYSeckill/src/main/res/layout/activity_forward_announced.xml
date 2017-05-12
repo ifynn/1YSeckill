@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.fynn.oyseckill.widget.Titlebar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:bar_background="@color/white"
+        app:bar_title="往期揭晓"
+        app:divider_color="@color/gray_E8E8E8"
+        app:go_back="@drawable/arrow_left_black_selector"
+        app:title_color="@color/black_4F4F4F" />
+
+    <com.fynn.oyseckill.widget.OverListView
+        android:id="@+id/lv_forward_ann"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:divider="@color/background"
+        android:dividerHeight="10dp"
+        android:listSelector="@color/transparent"
+        android:paddingBottom="10dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="暂无揭晓记录"
+        android:textColor="@color/black_666666"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</LinearLayout>
